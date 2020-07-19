@@ -1,0 +1,7 @@
+---
+# tasks file for ec2_security
+- name: create security group
+  import_tasks: security_group.yml
+
+- name: create EC2 instance with the security group
+  import_tasks: launch_ec2.yml

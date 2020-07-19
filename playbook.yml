@@ -1,0 +1,4 @@
+---
+- hosts: localhost # webservers
+  roles:
+    - ec2_security

@@ -1,0 +1,16 @@
+---
+# start an instance with a public IP address
+
+- name: launch ec2 instance
+  ec2_instance:
+    name: "yitzchak-test"
+    key_name: "yitzchak-eleff-test"
+    region: "{{ aws_region }}"
+    vpc_subnet_id: "{{ aws_vpc_subnet_id }}" # subnet-5ca1ab1e
+    instance_type: "{{ ec2_instance_type }}"
+    security_group: "{{ security_group_name }}"
+    network:
+      assign_public_ip: true
+    image_id: "{{ ec2_image_id }}" 
+    tags:
+      EnvName: "{{ EnvName }}"
