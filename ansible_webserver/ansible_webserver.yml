@@ -1,0 +1,5 @@
+---
+- name: Deploy an nginx webserver that will display the server IP
+  hosts: webservers
+  roles:
+    - webserver_with_ip

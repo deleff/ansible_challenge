@@ -3,13 +3,14 @@
 
 # Security group vars
 security_group_name: "eleff-test"
-aws_vpc_id: "vpc-12345678909876543" 
-aws_vpc_subnet_id: "subnet-12345678909876543" 
+aws_vpc_id: "vpc-12345678987654321"
+aws_vpc_subnet_id: "subnet-12345678987654321" 
 aws_profile: "default"
 aws_region: "eu-west-2"
-home_ip: 12.345.678.910/32
+ansible_ip: 123.456.78.9/24
+home_ip: 12.345.678.910/24
 
 # EC2 instance vars
 ec2_instance_type: t2.micro
 EnvName: "Test Environment"
-ec2_image_id: "ami-04122be15033aa7ec"
+ec2_image_id: "ami-0cf94b1c148cb4b81"

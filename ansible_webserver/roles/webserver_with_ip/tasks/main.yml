@@ -1,0 +1,18 @@
+---
+# tasks file for webserver_with_ip
+- name: Install nginx
+  yum: name=nginx state=latest
+  become: yes
+  become_user: root
+
+- name: copy the content of the web site
+  template:
+    src: ../templates/index.j2
+    dest: /usr/share/nginx/html/index.html
+  become: yes
+
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
+  become: yes 
